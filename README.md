@@ -1,5 +1,9 @@
 # MSGraph::Client
 
+[![Gem Version](https://badge.fury.io/rb/msgraph-client.svg)](https://badge.fury.io/rb/msgraph-client)
+![Ruby](https://github.com/simayosi/rb-msgraph-client/actions/workflows/test.yml/badge.svg)
+
+
 A simple client library for Microsoft Graph.
 
 
@@ -45,6 +49,10 @@ while endpoint
   endpoint = response[MSGraph::NEXT_LINK_KEY]
 end
 ```
+
+
+## API Reference
+[RubyDoc.info](https://rubydoc.info/gems/msgraph-client)
 
 
 ## License
