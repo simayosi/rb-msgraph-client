@@ -1,0 +1,18 @@
+module MSGraph
+  SCOPE: String
+  NEXT_LINK_KEY: :"@odata.nextLink"
+
+  class Client
+    BASE_URL: URI::Generic
+    @http: Net::HTTP
+
+    attr_accessor symbolize_names: bool
+    def initialize: (?symbolize_names: bool) -> void
+    def request: (String | Symbol command, String path, untyped token, ?untyped data, ?Hash[untyped, untyped] header) -> untyped
+
+    private
+    def url: (String path) -> URI::Generic
+    def http_request: (Net::HTTPGenericRequest request, untyped token, ?untyped data) -> Net::HTTPResponse
+    def http: -> Net::HTTP
+  end
+end

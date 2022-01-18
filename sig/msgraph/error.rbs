@@ -1,0 +1,8 @@
+module MSGraph
+  class Error < StandardError
+    attr_reader response: Net::HTTPResponse
+    attr_reader body: Hash[Symbol, untyped] | String
+    attr_reader error: Hash[Symbol, untyped]
+    def initialize: (Net::HTTPResponse res) -> void
+  end
+end
